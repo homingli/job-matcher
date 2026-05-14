@@ -4,6 +4,13 @@
 This document exists to prevent AI models from falling into repetition loops, or proposing solutions we have already discovered do not work in this specific codebase.
 
 ## 2026-05-14: [debug]
+- Problem / goal: Diagnose Vercel production `POST /api/match` 502.
+- Decision / action: Inspected route, model registry, resume loader, env docs. 502 comes from final catch around `loadDefaultResume()` and `generateObject()`.
+- Status: Done. Likely causes: invalid `RESUME_PATH`.
+
+***
+
+## 2026-05-14: [debug]
 ### The Issue
 Dependency install needed before build verification.
 
