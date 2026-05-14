@@ -1,0 +1,37 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+vendor/
+.pip/
+
+# Build / dist
+dist/
+build/
+.next/
+.out/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets / keys
+*.pem
+*.key
+secrets/
+
+# Agent work files (auto-generated)
+agent_logs/.tmp/
