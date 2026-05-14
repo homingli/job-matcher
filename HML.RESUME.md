@@ -1,134 +1,183 @@
+---
+name: Li, Ho Ming
+email: hexohugo@gmail.com
+location:
+  - Hong Kong
+  - Shenzhen
+languages:
+  - English
+  - Cantonese
+  - Mandarin
+target_roles:
+  - AI Solutions Engineer
+  - Principal Solutions Architect
+  - Senior Solutions Engineer
+  - Forward Deployed Engineer
+  - Developer Advocate, AI and Agents
+seniority:
+  - senior
+  - principal
+domains:
+  - AI agents
+  - cloud infrastructure
+  - data streaming
+  - cybersecurity
+  - reliability engineering
+  - go-to-market
+---
+
 # Li, Ho Ming
 
-hexohugo@gmail.com  
-English, Cantonese, Mandarin  
-Hong Kong | Shenzhen  
+## Positioning
 
-AI-embracing builder and tinkerer  
-A thoughtful ally, a reliable collaborator  
-A customer-first technical leader  
+Senior customer-facing technical leader for AI, cloud, data, security, and reliability platforms. Strong at bridging business and engineering teams, leading POCs, building self-service tools, and turning complex systems into clear customer value.
 
-## Summary
+## Agent / LLM Experience
 
-Senior customer-facing technical leader with experience across solutions engineering, solutions architecture, cloud infrastructure, cybersecurity, AI, and data streaming. Strong at bridging business and technical teams, accelerating POCs, building self-service tools, and translating complex systems into clear customer value.
+- Built a natural language query interface to a breach catalog using text-to-SQL with Ollama, LangChain, and DuckDB.
+- Built AI and developer tools including hmli.fyi, weather-whisperer, fluxgen-cli, timestamp tracker, and other vibecoding projects.
+- Skilled in LLMs, RAG, MCP, tool use, context engineering, agent workflows, LangChain, Ollama, Bedrock, Cursor, Antigravity, and N8N.
+- Experienced with AI architecture trade-offs: local models, hosted models, retrieval, structured outputs, prompt design, tool calling, and agent context management.
 
-## Core Skills
+## Skills
 
-- Go-to-market strategy.
-- Sales engineering.
-- Customer journey design.
-- Sales enablement.
-- Proof of concept (POC) leadership.
-- AI and data engineering.
-- Generative AI and LLMs.
-- Transformers.
-- AI agents.
-- MCP.
-- RAG.
-- Tool use.
-- Diffusion.
-- Cloud platforms: AWS, Google Cloud Platform, Microsoft Azure.
-- Reliability engineering and distributed systems.
-- Well-Architected design.
-- AI tooling and platforms: Ollama, LangChain, Bedrock, Cursor, Antigravity, N8N.
-- Compute platforms: Serverless (Lambda, Cloud Run), Kubernetes (EKS, Openshift).
-- Security and compliance: key management, encryption, cryptography, AuthN/AuthZ.
-- Data streaming: Confluent Platform/Cloud, Kafka, Flink.
-- Networking and edge: CDN, edge compute, private networking, TCP/UDP.
-- Operational excellence: DevOps, CI/CD, IaC (Terraform, CloudFormation), HA/BCP/DR.
-- Data storage: cache, columnar, transactional, SQL/NoSQL, file/block/object.
-- Languages and formats: Python, Golang, JavaScript, TypeScript, JSON, AVRO, Parquet.
+### AI / Agents
 
-## Highlights
+- Generative AI, LLMs, transformers, diffusion models.
+- RAG, MCP, tool use, context engineering, agentic engineering.
+- Ollama, LangChain, Bedrock, Cursor, Antigravity, N8N.
+- Text-to-SQL, structured data extraction, notebook workflows, local AI tooling.
 
-- Patent US-11561927-B1, issued Jan 24, 2023: Migrating data objects from a distributed data store to a different data store using portable storage devices.
-- Confluent Data Streaming Engineer, Confluent Fundamentals Accreditation 2025.
-- AWS Certified DevOps Engineer & Solutions Architect - Pro [AWS-PDOE-791, AWS-PSA-1583], 2016.
-- 1st Place Winner, International Space Apps Challenge [Vancouver Node] – Sagan, April 2012.
-- 2nd Place, Startup Weekend Vancouver 2011 – BagTag, Nov 2011.
+### Cloud / Platform
 
-## Projects
+- AWS, Google Cloud Platform, Microsoft Azure.
+- Serverless: AWS Lambda, Cloud Run.
+- Kubernetes: EKS, OpenShift.
+- Well-Architected design, distributed systems, reliability engineering.
+- DevOps, CI/CD, IaC, Terraform, CloudFormation, HA, BCP, DR.
 
-- Vibecoding projects: hmli.fyi, weather-whisperer, fluxgen-cli, timestamp tracker, and others (2026).
-- Perceptron Branch Predictor — lab work in a UBC Computer Architecture course.
+### Data / Streaming
+
+- Confluent Platform, Confluent Cloud, Kafka, Flink.
+- ETL, ELT, data engineering, data pipelines.
+- Arrow, Parquet, AVRO, SQL, NoSQL, columnar storage, transactional storage, cache, file storage, block storage, object storage.
+
+### Security / Compliance
+
+- Cybersecurity, identity fraud, breach data, password exposure.
+- Key management, encryption, cryptography, AuthN, AuthZ.
+- Private networking, CDN, edge compute, TCP, UDP.
+
+### Go-To-Market / Customer
+
+- Solutions architecture, solutions engineering, sales engineering.
+- Go-to-market strategy, customer journey design, sales enablement.
+- POC leadership, demo building, workshops, public speaking, partner education.
+
+### Languages / Formats
+
+- Python, Go, JavaScript, TypeScript.
+- JSON, AVRO, Parquet.
 
 ## Experience
 
-### Confluent — Real-time data streaming
-**Senior Solutions Engineer**  
-Hong Kong, SAR (Remote) | Jun 2025 – Apr 2026
+### Confluent | Senior Solutions Engineer
+
+Hong Kong SAR, Remote | 2025-06 to 2026-04
 
 - Partnered with enterprise customers to architect and optimize data streaming solutions.
 - Accelerated adoption of Kafka and Flink for critical platform teams through workshops and education sessions.
+- Applied Confluent Platform and Confluent Cloud knowledge to customer architecture, migration, and enablement work.
 
-### SpyCloud — Cybersecurity
-**Principal Solutions Architect**  
-Austin, TX (Hybrid) | Dec 2021 – May 2025
+### SpyCloud | Principal Solutions Architect
 
-- Accelerated POC data testing using resume and multiprocessing, enabling same-day turnarounds.
-- Created self-service Jupyter notebooks for SEs to run standard preliminary analysis for identity fraud.
-- Educated BD, sales teams, partners, and customers on trade-offs between consuming SpyCloud data via API or via S3.
+Austin, TX, Hybrid | 2021-12 to 2025-05
+
+- Accelerated POC data testing using resume/retry logic and multiprocessing, enabling same-day turnarounds.
+- Created self-service Jupyter notebooks for solutions engineers to run standard preliminary analysis for identity fraud.
+- Educated business development, sales teams, partners, and customers on trade-offs between consuming SpyCloud data via API or S3.
 - Built password exposure and identity fraud data notebooks using VSCode, Plotly, Polars, Jupyter, Arrow, and Parquet.
 - Built a natural language query interface to a breach catalog using text-to-SQL with Ollama, LangChain, and DuckDB.
-- Recognized as a bridge builder across teams and a strong translator of technical content into layperson’s terms.
+- Recognized as a bridge builder across teams and a strong translator of technical content into layperson terms.
 
-**Manager quote**
+### Open Raven | Sales Solutions Engineering Leader
 
-> Bridge builder across teams; translator of technical content into layperson's terms; good communicator. Able to talk to customers and to engineers; effective wearer of many hats; well respected and well liked by all. We're lucky to have HML on the team.
->
-> — Ronak Patel, CTO at SpyCloud
-
-### Open Raven — Cybersecurity
-**Sales Solutions Engineering Leader**  
-Austin, USA (Remote) | Oct 2020 – Aug 2021
+Austin, TX, Remote | 2020-10 to 2021-08
 
 - Shaped GTM strategy, built demos, drove POCs, and crafted the customer journey.
-- First technical non-engineering hire; closed early enterprise deals with six-figure ACVs.
-- Implemented webhook, AWS EventBridge, and Slack integrations for when sensitive data is uncovered.
+- Joined as first technical non-engineering hire and helped close early enterprise deals with six-figure ACVs.
+- Implemented webhook, AWS EventBridge, and Slack integrations for sensitive-data discovery workflows.
 
-### Gremlin — Resilience
-**Principal SA & Head of Solutions Architecture**  
-San Francisco, USA | Feb 2018 – Oct 2020
+### Gremlin | Principal SA and Head of Solutions Architecture
 
-- Founding SA; established the SA and CS functions from the ground up.
-- Shaped the GTM strategy; hired and mentored six architects across pre-sales and post-sales.
-- Partnered with Product on Tier-1 launches, including K8s support and scenarios.
+San Francisco, CA | 2018-02 to 2020-10
+
+- Founded solutions architecture and customer success functions from the ground up.
+- Shaped GTM strategy and hired and mentored six architects across pre-sales and post-sales.
+- Partnered with Product on Tier-1 launches, including Kubernetes support and reliability scenarios.
 - Served as an international speaker on SRE and chaos engineering.
-- Coached customers on reliability mechanisms like circuit breakers, exponential backoff, and thundering herd mitigation.
+- Coached customers on reliability mechanisms including circuit breakers, exponential backoff, and thundering herd mitigation.
 
-**Manager quote**
+### Amazon Web Services | Sr. TAM and Solutions Architect
 
-> Ho Ming is a true leader, one who is focused on the business at hand while also looking at what is best for the business in the long run while ensuring his team is taken care of. I would work for Ho Ming again in a heartbeat.
->
-> — Patrick Brennan, Direct-Report
+San Francisco Bay Area, CA, Hybrid | 2014-07 to 2018-02
 
-### Amazon Web Services — Cloud infrastructure
-**Sr. TAM & Solutions Architect (SME for Search and Serverless)**  
-San Francisco Bay Area, USA (Hybrid) | Jul 2014 – Feb 2018
-
+- Served as subject matter expert for search and serverless workloads.
 - Attained AWS PR Tier-2 certification and led public workshops, hackathons, and private events.
-- Served as a SME for the creation of AWS Certification exams (Cloud Practitioner, DevOps/SA Professional).
-- Acted as the Voice of the Customer for pre-launch adoption of AWS Lambda and API Gateway.
+- Served as subject matter expert for AWS Certification exams including Cloud Practitioner, DevOps Professional, and Solutions Architect Professional.
+- Acted as Voice of the Customer for pre-launch adoption of AWS Lambda and API Gateway.
 - Advised on patterns including horizontal scaling, infrastructure as code, and event-driven architecture.
-- Built projects including Serverless Not Hotdog, Map Reduce with Lambda, Cloudwatch API Tracker, S3 Bundler, AWS Launcher, and AWS TAM CLI.
+- Built projects including Serverless Not Hotdog, Map Reduce with Lambda, CloudWatch API Tracker, S3 Bundler, AWS Launcher, and AWS TAM CLI.
 
-### Prior Roles — Canada
-**ActiveState, NetApp, Bycast, IBM, WebCT, Fortinet**  
-Canada | 2005 – 2014
+### Prior Roles | Canada
 
-- Prior roles: Sales Engineer, Software Engineer, Validation Engineer, Build & Release Engineer.
+ActiveState, NetApp, Bycast, IBM, WebCT, Fortinet | 2005 to 2014
+
+- Worked as Sales Engineer, Software Engineer, Validation Engineer, and Build and Release Engineer.
+- Built foundation across infrastructure software, storage, validation, release engineering, and customer-facing technical work.
+
+## Projects
+
+- hmli.fyi: personal site and AI/dev project hub.
+- weather-whisperer: AI-assisted weather tool.
+- fluxgen-cli: developer CLI project.
+- timestamp tracker: productivity and tracking tool.
+- Perceptron Branch Predictor: UBC computer architecture lab work.
+
+## Certifications / Awards / Patents
+
+- Patent US-11561927-B1, issued 2023-01-24: Migrating data objects from a distributed data store to a different data store using portable storage devices.
+- Confluent Data Streaming Engineer, 2025.
+- Confluent Fundamentals Accreditation, 2025.
+- AWS Certified DevOps Engineer - Professional, AWS-PDOE-791, 2016.
+- AWS Certified Solutions Architect - Professional, AWS-PSA-1583, 2016.
+- 1st Place Winner, International Space Apps Challenge, Vancouver Node, Sagan, 2012-04.
+- 2nd Place, Startup Weekend Vancouver, BagTag, 2011-11.
 
 ## Education
 
 ### University of British Columbia
+
 Vancouver, Canada | 2009
 
 - Bachelor of Applied Science.
 - Major: Electrical Engineering.
 - Minor: Commerce.
 
+## Testimonials
+
+### SpyCloud Manager Quote
+
+> Bridge builder across teams; translator of technical content into layperson's terms; good communicator. Able to talk to customers and to engineers; effective wearer of many hats; well respected and well liked by all. We're lucky to have HML on the team.
+>
+> -- Ronak Patel, CTO at SpyCloud
+
+### Gremlin Direct-Report Quote
+
+> Ho Ming is a true leader, one who is focused on the business at hand while also looking at what is best for the business in the long run while ensuring his team is taken care of. I would work for Ho Ming again in a heartbeat.
+>
+> -- Patrick Brennan, Direct-Report
+
 ## Keywords
 
-AI, data engineering, cloud, solutions architecture, solutions engineering, sales engineering, AWS, GCP, Azure, Kafka, Flink, LLMs, RAG, MCP, serverless, Kubernetes, reliability engineering, cybersecurity, DevOps, infrastructure, distributed systems.
-
-
+AI, AI agents, agentic engineering, context engineering, LLMs, RAG, MCP, tool use, text-to-SQL, data engineering, cloud, solutions architecture, solutions engineering, sales engineering, AWS, GCP, Azure, Kafka, Flink, Confluent, serverless, Kubernetes, reliability engineering, cybersecurity, identity fraud, DevOps, infrastructure, distributed systems, Python, Go, JavaScript, TypeScript.

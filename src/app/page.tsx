@@ -76,37 +76,34 @@ export default function Home() {
 
   return (
     <main className="min-h-screen px-4 py-6 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(420px,1.1fr)]">
-        <section className="rounded-lg border border-[color:var(--line)] bg-[color:var(--panel)] p-5 shadow-sm">
+      <div className="grid max-w-7xl gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(420px,1.1fr)]">
+        <section className="flex min-h-[calc(100vh-3rem)] flex-col rounded-lg border border-[color:var(--line)] bg-[color:var(--panel)] p-5 shadow-sm">
           <div className="flex flex-col gap-2 border-b border-[color:var(--line)] pb-4">
             <p className="text-sm font-semibold uppercase tracking-normal text-[color:var(--accent)]">Job Matcher</p>
-            <h1 className="text-3xl font-semibold text-balance">Resume fit assessment</h1>
-            <p className="max-w-2xl text-sm leading-6 text-[color:var(--muted)]">
-              Paste a job description. The API compares it with the default resume and returns a structured fit report.
-            </p>
-          </div>
-
-          <form className="mt-5 flex flex-col gap-4" onSubmit={submitJobDescription}>
-            <div className="flex items-center justify-between gap-3">
-              <label className="text-sm font-medium" htmlFor="job-description">
-                Job description
-              </label>
+            <div className="flex items-start justify-between gap-4">
+              <h1 className="text-xl font-semibold text-balance">Resume fit assessment</h1>
               <button
-                className="rounded-md border border-[color:var(--line)] px-3 py-1.5 text-sm font-medium hover:bg-slate-50"
+                className="rounded-md border border-[color:var(--line)] px-3 py-2 !text-xs font-medium text-[color:var(--muted)] hover:bg-[color:var(--panel)]"
                 type="button"
                 onClick={() => setJobDescription(SAMPLE_JOB_DESCRIPTION)}
               >
-                Use sample
+                use sample job description
               </button>
             </div>
+            <p className="max-w-2xl text-sm leading-6 text-[color:var(--muted)]">
+              Job matcher will show you how well Ho Ming suits your job role.
+            </p>
+          </div>
+
+          <form className="mt-5 flex flex-1 flex-col gap-4" onSubmit={submitJobDescription}>
             <textarea
               id="job-description"
-              className="min-h-[420px] resize-y rounded-lg border border-[color:var(--line)] bg-white p-4 text-sm leading-6 shadow-inner"
+              className="flex-1 resize-y rounded-lg border border-[color:var(--line)] bg-white p-4 text-sm leading-6 shadow-inner"
               placeholder="Paste full job description here..."
               value={jobDescription}
               onChange={(event) => setJobDescription(event.target.value)}
             />
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm text-[color:var(--muted)]">{statusText}</p>
               <button
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-[color:var(--accent)] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[color:var(--accent-dark)] disabled:cursor-not-allowed disabled:opacity-50"

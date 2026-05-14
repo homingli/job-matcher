@@ -27,6 +27,35 @@ Built v1 Next.js job matcher from `PLAN.md`.
 
 ***
 
+## 2026-05-14: [engineering]
+### Status: Done
+
+**Description:**
+Reviewed `HML.RESUME.md` for agent-readable resume structure.
+
+**Changes:**
+- No resume edits. Suggested schema, keyword, evidence, and parsing improvements.
+
+**Notes:**
+- Focus: improve markdown for LLM/agent extraction and job matching.
+
+***
+
+## 2026-05-14: [engineering]
+### Status: Done
+
+**Description:**
+Reworked `HML.RESUME.md` into agent-readable markdown.
+
+**Changes:**
+- `HML.RESUME.md`: Added YAML frontmatter, target roles, domains, grouped skill taxonomy, agent/LLM section, normalized date format, and parser-friendly experience headings.
+- `HML.RESUME.md`: Moved quotes into `Testimonials` and expanded project/certification structure.
+
+**Notes:**
+- Preserved source facts. Did not invent metrics or URLs.
+
+***
+
 ## [Date]: [Feature/Task]
 ### Status: [In Progress / Completed / Blocked]
 
