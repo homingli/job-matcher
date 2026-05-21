@@ -14,6 +14,21 @@
 
 ***
 
+## 2026-05-21: [security]
+### Finding
+API Key to model provider can be exhausted if an IP sends excessive requests to `/api/match`.
+
+**Severity:** Medium
+
+**Status:** Mitigated
+
+**Mitigation:**
+- Implemented in-memory IP-based rate limiting on the POST `/api/match` endpoint.
+- Default limit is set to 3 requests per 10 minutes.
+- Returns HTTP 429 Too Many Requests with a `Retry-After` header when limit is exceeded.
+
+***
+
 ## [Date]: [Category]
 ### Finding
 [Description of security issue or analysis]

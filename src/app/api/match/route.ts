@@ -7,6 +7,59 @@ import { loadDefaultResume } from "@/lib/resume";
 
 export const runtime = "nodejs";
 
+const RATE_LIMIT_WINDOW = Number(process.env.RATE_LIMIT_WINDOW_MS) || 10 * 60 * 1000; // 10 minutes
+const RATE_LIMIT_MAX = Number(process.env.RATE_LIMIT_MAX_REQUESTS) || 3;
+
+// In-memory cache for IP requests
+const ipCache = new Map<string, number[]>();
+let lastPruned = Date.now();
+const PRUNE_INTERVAL = 60 * 60 * 1000; // 1 hour
+
+function pruneIpCache() {
+  const now = Date.now();
+  for (const [ip, timestamps] of ipCache.entries()) {
+    const valid = timestamps.filter(t => now - t < RATE_LIMIT_WINDOW);
+    if (valid.length === 0) {
+      ipCache.delete(ip);
+    } else {
+      ipCache.set(ip, valid);
+    }
+  }
+  lastPruned = now;
+}
+
+function checkRateLimit(ip: string): { allowed: boolean; retryAfter: number } {
+  const now = Date.now();
+  if (now - lastPruned > PRUNE_INTERVAL) {
+    pruneIpCache();
+  }
+
+  const timestamps = ipCache.get(ip) || [];
+  const valid = timestamps.filter(t => now - t < RATE_LIMIT_WINDOW);
+
+  if (valid.length >= RATE_LIMIT_MAX) {
+    const oldest = valid[0];
+    const retryAfter = Math.ceil((RATE_LIMIT_WINDOW - (now - oldest)) / 1000);
+    return { allowed: false, retryAfter };
+  }
+
+  valid.push(now);
+  ipCache.set(ip, valid);
+  return { allowed: true, retryAfter: 0 };
+}
+
+function getClientIp(request: Request): string {
+  const xForwardedFor = request.headers.get("x-forwarded-for");
+  if (xForwardedFor) {
+    return xForwardedFor.split(",")[0].trim();
+  }
+  const xRealIp = request.headers.get("x-real-ip");
+  if (xRealIp) {
+    return xRealIp;
+  }
+  return "127.0.0.1";
+}
+
 function buildPrompt(resume: string, jobDescription: string): string {
   return `You are a career matching assistant. Compare the candidate resume against the job description.
 
@@ -30,6 +83,21 @@ function errorResponse(message: string, status: number) {
 }
 
 export async function POST(request: Request) {
+  const ip = getClientIp(request);
+  const { allowed, retryAfter } = checkRateLimit(ip);
+
+  if (!allowed) {
+    return NextResponse.json(
+      { error: `Too many requests. Please try again in ${retryAfter} seconds.` },
+      { 
+        status: 429,
+        headers: {
+          "Retry-After": String(retryAfter)
+        }
+      }
+    );
+  }
+
   let body: unknown;
 
   try {
