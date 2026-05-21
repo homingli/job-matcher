@@ -56,6 +56,22 @@ Reworked `HML.RESUME.md` into agent-readable markdown.
 
 ***
 
+## 2026-05-21: [engineering]
+### Status: Completed
+
+**Description:**
+Implemented IP rate limiting on POST `/api/match` endpoint to protect provider API key usage.
+
+**Changes:**
+- `src/app/api/match/route.ts`: Added IP lookup logic, in-memory request tracking cache, hourly cache pruning, and rate limiting validation before key processing. Returns HTTP 429 when limit exceeded.
+
+**Notes:**
+- Rate limiting defaults to 3 requests per 10 minutes, configurable via `RATE_LIMIT_WINDOW_MS` and `RATE_LIMIT_MAX_REQUESTS` environment variables.
+- Clean-up routine checks and prunes stale IP cache records every hour.
+- Tested manually via `curl` loop and verified HTTP 429 status and `Retry-After` header.
+
+***
+
 ## [Date]: [Feature/Task]
 ### Status: [In Progress / Completed / Blocked]
 
